@@ -354,3 +354,35 @@ a:hover { opacity: 0.7; }
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--color-accent2); }
+.read-more {
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid #e8ddd0;
+  font-size: 0.9rem;
+  color: #8a7d6d;
+}
+
+.read-more p {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.read-more ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.read-more li {
+  margin-bottom: 0.3rem;
+}
+
+.read-more a {
+  color: #8a7d6d;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.read-more a:hover {
+  border-bottom-color: #8a7d6d;
+}
