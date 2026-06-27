@@ -1,55 +1,356 @@
+/* ============================================
+   做一个人 · 全局样式
+   简洁 / 丝滑 / 温暖
+   ============================================ */
+
+/* ---------- 基础变量 ---------- */
+:root {
+  --color-bg:       #FAF8F5;   /* 暖白 */
+  --color-text:     #4A4338;   /* 深棕灰 */
+  --color-muted:    #8C8276;   /* 柔和灰棕 */
+  --color-accent:   #B5A48C;   /* 大地色 */
+  --color-accent2:  #D4C5B0;   /* 浅大地色 */
+  --color-highlight:#9B8573;   /* 强调棕 */
+  --color-line:     #E0D8CC;   /* 分隔线 */
+  --color-dot:      #C8BDAF;   /* 进度点 */
+  --color-dot-active: #9B8573; /* 当前进度点 */
+  --font-serif:     'Noto Serif SC', 'Songti SC', serif;
+  --font-sans:      -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --transition:     0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* ---------- 全局重置 ---------- */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
 body {
-  margin: 0;
-  font-family: "Noto Serif SC", serif;
-  background: #fafafa;
-  color: #333;
-  line-height: 1.8;
+  font-family: var(--font-serif);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 2;
+  -webkit-font-smoothing: antialiased;
 }
 
-header {
-  padding: 60px 20px;
+a {
+  color: var(--color-highlight);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+a:hover { opacity: 0.7; }
+
+/* ============================================
+   首页
+   ============================================ */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.home-container {
   text-align: center;
-  background: #f2efea;
+  max-width: 520px;
+  animation: fadeUp 1.2s ease-out;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2em;
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.home-subtitle {
+  font-size: 1rem;
+  color: var(--color-muted);
+  letter-spacing: 0.3em;
+  margin-bottom: 0.5rem;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--color-text);
+  letter-spacing: 0.15em;
+  margin-bottom: 2.5rem;
+}
+
+.home-quote {
+  font-size: 1.05rem;
+  line-height: 2.2;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.home-quote-last {
+  margin-top: 0.3rem;
+}
+
+.home-sign {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.1em;
+}
+
+.btn-enter {
+  display: inline-block;
+  padding: 0.85rem 2.8rem;
+  border: 1.5px solid var(--color-accent);
+  border-radius: 100px;
+  color: var(--color-highlight);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+.btn-enter:hover {
+  background: var(--color-accent2);
+  border-color: var(--color-accent2);
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(155, 133, 115, 0.15);
+}
+
+/* ============================================
+   「我们的世界」页面
+   ============================================ */
+
+/* ----- 顶部导航 ----- */
+.top-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: rgba(250, 248, 245, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 100;
+  transition: box-shadow var(--transition);
+}
+.top-nav.scrolled {
+  box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+}
+
+.nav-brand {
+  font-size: 1rem;
+  color: var(--color-text);
+  letter-spacing: 0.15em;
+  font-weight: 400;
+}
+.nav-contact {
+  font-size: 0.85rem;
+  color: var(--color-muted);
   letter-spacing: 0.05em;
 }
 
-nav {
-  margin-top: 20px;
+/* ----- 主体 ----- */
+.world-main {
+  padding-top: 0;
 }
 
-nav a {
-  margin: 0 10px;
-  color: #7a6f64;
-  text-decoration: none;
-  font-size: 0.95em;
+/* ----- 第一屏引言 ----- */
+.section-intro {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem 3rem;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-section {
-  max-width: 720px;
-  margin: auto;
-  padding: 60px 20px;
-}
-
-h2 {
-  font-size: 1.5em;
-  border-left: 4px solid #c9bca8;
-  padding-left: 12px;
-  margin-bottom: 24px;
-}
-
-footer {
+.section-intro .section-inner {
   text-align: center;
-  padding: 40px;
-  font-size: 0.9em;
-  color: #999;
-  background: #f2efea;
+  max-width: 560px;
 }
+
+.section-quote {
+  font-size: 1.15rem;
+  line-height: 2.4;
+  color: var(--color-text);
+}
+.quote-last {
+  display: inline-block;
+  margin-top: 0.3rem;
+}
+
+.section-sign {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-top: 2rem;
+  letter-spacing: 0.1em;
+}
+
+/* ----- 分隔线 ----- */
+.divider {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+.divider span {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--color-line);
+}
+
+/* ----- 内容区块 ----- */
+.section {
+  padding: 5rem 2rem;
+}
+.section:last-child {
+  padding-bottom: 6rem;
+}
+
+.section-inner {
+  max-width: 620px;
+  margin: 0 auto;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity 0; transform: translateY(20px); }
+  to   { opacity 1; transform: translateY(0); }
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--color-text);
+  letter-spacing: 0.15em;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 30px;
+  height: 1.5px;
+  background: var(--color-accent);
+}
+
+.section-content {
+  font-size: 1rem;
+  line-height: 2.2;
+  color: var(--color-text);
+}
+.section-content p {
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+  font-size: 1rem;
+  color: var(--color-highlight);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.highlight-line {
+  color: var(--color-highlight);
+  margin-top: 1.2rem;
+}
+
+/* ----- "关于我们俩" 区块 ----- */
+.two-of-us {
+  margin-top: 2rem;
+  padding: 1.5rem 1.8rem;
+  background: rgba(212, 197, 176, 0.12);
+  border-radius: 8px;
+  border-left: 2px solid var(--color-accent2);
+}
+
+/* ----- 联系我们 ----- */
+.contact-content {
+  text-align: center;
+}
+.contact-email {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--color-highlight);
+  letter-spacing: 0.05em;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--color-accent2);
+  border-radius: 100px;
+  transition: all var(--transition);
+}
+.contact-email:hover {
+  background: var(--color-accent2);
+  opacity: 1;
+}
+
+/* ----- 底部 ----- */
+.footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  border-top: 1px solid var(--color-line);
+}
+.footer-sub {
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  color: var(--color-line);
+}
+
+/* ============================================
+   右侧进度指示点
+   ============================================ */
+.progress-dots {
+  position: fixed;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 90;
+}
+
+.dot {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-dot);
+  transition: all var(--transition);
+  cursor: pointer;
+}
+.dot.active {
+  background: var(--color-dot-active);
+  transform: scale(1.4);
+}
+
+/* ============================================
+   响应式
+   ============================================ */
+@media (max-width: 640px) {
+  .home-title { font-size: 2.2rem; }
+  .home-quote, .section-quote { font-size: 1rem; line-height: 2; }
+  .section { padding: 3.5rem 1.5rem; }
+  .section-title { font-size: 1.2rem; }
+  .progress-dots { right: 0.6rem; gap: 8px; }
+  .dot { width: 5px; height: 5px; }
+  .top-nav { padding: 1rem 1.2rem; }
+  .contact-email { font-size: 1rem; }
+}
+
+/* ----- 滚动条美化 ----- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent2); }
