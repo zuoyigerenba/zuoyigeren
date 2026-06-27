@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我们的世界 · 做一个人</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="world">
+
+  <!-- 顶部导航 -->
+  <nav class="top-nav">
+    <a href="index.html" class="nav-brand">做一个人</a>
+    <a href="mailto:slowgrowth@example.com" class="nav-contact">联系我们</a>
+  </nav>
+
+  <main class="world-main">
+
+    <!-- 第一屏：引言 -->
+    <section class="section section-intro" id="intro">
+      <div class="section-inner">
+        <p class="section-quote">
+          陪伴人们去经历。<br />
+          有些感受不会在一个人的时候浮现，<br />
+          却会在有安全感的环境里自然流动。<br />
+          <span class="quote-last">生命，也就是在流动。</span>
+        </p>
+        <p class="section-sign">—— 春春 & 川哥</p>
+      </div>
+    </section>
+
+    <!-- 分隔线 -->
+    <div class="divider"><span></span></div>
+
+    <!-- 我们关注的是 -->
+    <section class="section" id="care">
+      <div class="section-inner">
+        <h2 class="section-title">我们关注的是</h2>
+        <div class="section-content">
+          <p>我们关注那些在一个人时难以浮现，却长久压在心底的感受。</p>
+          <p>我们关注人在丧失后的停顿，不催促其前行。</p>
+          <p>我们关注身处转换期的迷茫，不将其视为错误或失败。</p>
+          <p>我们关注自我关怀的艰难，并尝试在关系中练习温柔。</p>
+          <p class="highlight-line">我们相信，当这些被关注的部分得以被看见，生命便会慢慢流动起来。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 分隔线 -->
+    <div class="divider"><span></span></div>
+
+    <!-- 团体风格 -->
+    <section class="section" id="style">
+      <div class="section-inner">
+        <h2 class="section-title">团体风格</h2>
+        <div class="section-content">
+          <p>我们所希望构建的团体，是这样一个空间：</p>
+          <p>不催促改变，也不急于求成。</p>
+          <p>我们看重安全感胜过效率，看重真实胜过正确。</p>
+          <p>我们允许沉默存在，也允许情绪慢慢浮现，而不必立刻被解释或解决。</p>
+          <p class="highlight-line">我和川哥愿意在这样的流动中，陪你多待一会儿。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 分隔线 -->
+    <div class="divider"><span></span></div>
+
+    <!-- 不同的我们 -->
+    <section class="section" id="different">
+      <div class="section-inner">
+        <h2 class="section-title">不同的我们</h2>
+        <div class="section-content">
+          <p class="sub-title">在哀伤里，我们…</p>
+          <p>不去劝慰，也不急着帮你"走出来"。我们允许哀伤存在，也允许它反复。我们看重你对失去之物的依恋，胜过看重"放下"。在这里，你的丧失是被允许的，你的停顿是被尊重的。</p>
+
+          <p class="sub-title">在个人成长里，我们…</p>
+          <p>不设定"更好的自己"作为目标，也不催促你改变。我们更在意你是如何经验自己的，在意那些细微的、不易察觉的变化。我们愿意陪你在熟悉的经验里多待一会儿，直到你自然地想要往前挪一步。</p>
+
+          <p class="sub-title">在转换期里，我们…</p>
+          <p>不把迷茫看作问题，也不把停滞看作失败。我们看重你在新旧身份之间的摇摆，看重那些"既不是…也不再是…"的中间地带。我们愿意陪你一起，容忍不确定，直到新的轮廓慢慢清晰。</p>
+
+          <p class="sub-title">在自我关怀里，我们…</p>
+          <p>不把自我关怀当作一种技巧来教授，也不要求你立刻对自己温柔。我们更在意你对自己苛刻背后的理由，在意那些"不配得"的感受。我们愿意陪你一起，慢慢松动那份严苛，让一点点温柔有机会渗进来。</p>
+
+          <div class="two-of-us">
+            <p class="sub-title">关于我们俩</p>
+            <p>在这些不同的主题里，我和川哥的角色也不尽相同。一个更在意结构的稳定，一个更在意情绪的流动；一个习惯从框架中理解经验，一个更愿意停留在不确定的感受里。我们允许彼此的差异存在，也愿意在这样的差异中，陪你一起容纳自己的矛盾。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 分隔线 -->
+    <div class="divider"><span></span></div>
+
+    <!-- 个体咨询 -->
+    <section class="section" id="individual">
+      <div class="section-inner">
+        <h2 class="section-title">个体咨询</h2>
+        <div class="section-content">
+          <p>除团体外，我们也提供一对一的咨询空间，由春春和川哥分别带领。</p>
+          <p>如果你希望在一个更私密、连续的关系中工作，或是不确定自己更适合团体还是个体，欢迎通过邮件与我们联系，我们可以一起慢慢看看。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 分隔线 -->
+    <div class="divider"><span></span></div>
+
+    <!-- 关于「做一个人」 -->
+    <section class="section" id="about">
+      <div class="section-inner">
+        <h2 class="section-title">关于「做一个人」</h2>
+        <div class="section-content">
+          <p>「做一个人」是由春春发起，春春和川哥共同策划、打造的空间。</p>
+          <p>我们借这个名字，想说的是：</p>
+          <p>在这里，你不需要做一个"更好的""更专业的"或"更坚强的"人，你只需要做一个有感受、会脆弱、能停顿的普通人。</p>
+          <p class="highlight-line">我们愿意在这个空间里，陪你一起，慢慢成为一个更真实的人——也在这个过程中，不断重新学习如何做一个人。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 分隔线 -->
+    <div class="divider"><span></span></div>
+
+    <!-- 联系我们 -->
+    <section class="section section-contact" id="contact">
+      <div class="section-inner">
+        <h2 class="section-title">联系我们</h2>
+        <div class="section-content contact-content">
+          <p>如果你在阅读这些文字时，感到被理解，</p>
+          <p>或是发现自己正在经历我们所描述的某个阶段，</p>
+          <p>不需要准备好，也不需要想清楚所有问题，</p>
+          <p class="highlight-line">只要带着你自己，就可以通过邮件找到我们。</p>
+          <a href="mailto:slowgrowth@example.com" class="contact-email">slowgrowth@example.com</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 底部 -->
+  <footer class="footer">
+    <p>做一个人 · 缓慢生长</p>
+    <p class="footer-sub">春春 & 川哥</p>
+  </footer>
+
+  <!-- 右侧进度指示器 -->
+  <div class="progress-dots">
+    <a href="#intro" class="dot active" data-index="0"></a>
+    <a href="#care" class="dot" data-index="1"></a>
+    <a href="#style" class="dot" data-index="2"></a>
+    <a href="#different" class="dot" data-index="3"></a>
+    <a href="#individual" class="dot" data-index="4"></a>
+    <a href="#about" class="dot" data-index="5"></a>
+    <a href="#contact" class="dot" data-index="6"></a>
+  </div>
+
+  <script>
+    // 滚动时高亮当前 dot
+    const dots = document.querySelectorAll('.dot');
+    const sections = document.querySelectorAll('.section, .section-intro');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          dots.forEach(dot => {
+            dot.classList.toggle('active', dot.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
