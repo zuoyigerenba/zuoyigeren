@@ -239,3 +239,12 @@ a {
     height: 8px;
   }
 }
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+}
