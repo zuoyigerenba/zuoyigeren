@@ -1,359 +1,122 @@
-/* ============================================
-   做一个人 · 全局样式
-   简洁 / 丝滑 / 温暖
-   ============================================ */
-
-/* ---------- 基础变量 ---------- */
-:root {
-  --color-bg:       #FAF8F5;   /* 暖白 */
-  --color-text:     #4A4338;   /* 深棕灰 */
-  --color-muted:    #8C8276;   /* 柔和灰棕 */
-  --color-accent:   #B5A48C;   /* 大地色 */
-  --color-accent2:  #D4C5B0;   /* 浅大地色 */
-  --color-highlight:#9B8573;   /* 强调棕 */
-  --color-line:     #E0D8CC;   /* 分隔线 */
-  --color-dot:      #C8BDAF;   /* 进度点 */
-  --color-dot-active: #9B8573; /* 当前进度点 */
-  --font-serif:     'Noto Serif SC', 'Songti SC', serif;
-  --font-sans:      -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --transition:     0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+/* ========== global ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ---------- 全局重置 ---------- */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
 html {
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  font-size: 16px;
 }
 
 body {
-  font-family: var(--font-serif);
-  background: var(--color-bg);
-  color: var(--color-text);
+  font-family: 'Noto Serif SC', serif;
+  background: #FAF8F5;
+  color: #4A4338;
   line-height: 2;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: var(--color-highlight);
+  color: inherit;
   text-decoration: none;
-  transition: opacity var(--transition);
-}
-a:hover { opacity: 0.7; }
-
-/* ============================================
-   首页
-   ============================================ */
-.home {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
 }
 
-.home-container {
-  text-align: center;
-  max-width: 520px;
-  animation: fadeUp 1.2s ease-out;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.home-subtitle {
-  font-size: 1rem;
-  color: var(--color-muted);
-  letter-spacing: 0.3em;
-  margin-bottom: 0.5rem;
-}
-
-.home-title {
-  font-size: 3rem;
-  font-weight: 300;
-  color: var(--color-text);
-  letter-spacing: 0.15em;
-  margin-bottom: 2.5rem;
-}
-
-.home-quote {
-  font-size: 1.05rem;
-  line-height: 2.2;
-  color: var(--color-text);
-  margin-bottom: 0.5rem;
-}
-
-.home-quote-last {
-  margin-top: 0.3rem;
-}
-
-.home-sign {
-  font-size: 0.9rem;
-  color: var(--color-muted);
-  margin-top: 1.5rem;
-  margin-bottom: 2.5rem;
-  letter-spacing: 0.1em;
-}
-
-.btn-enter {
-  display: inline-block;
-  padding: 0.85rem 2.8rem;
-  border: 1.5px solid var(--color-accent);
-  border-radius: 100px;
-  color: var(--color-highlight);
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
-  letter-spacing: 0.1em;
-  transition: all var(--transition);
-  cursor: pointer;
-}
-.btn-enter:hover {
-  background: var(--color-accent2);
-  border-color: var(--color-accent2);
-  opacity: 1;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(155, 133, 115, 0.15);
-}
-
-/* ============================================
-   「我们的世界」页面
-   ============================================ */
-
-/* ----- 顶部导航 ----- */
+/* ========== top nav ========== */
 .top-nav {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 2rem;
+  padding: 1rem 2rem;
   background: rgba(250, 248, 245, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  z-index: 100;
-  transition: box-shadow var(--transition);
-}
-.top-nav.scrolled {
-  box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .nav-brand {
-  font-size: 1rem;
-  color: var(--color-text);
-  letter-spacing: 0.15em;
+  font-size: 1.1rem;
   font-weight: 400;
-}
-.nav-contact {
-  font-size: 0.85rem;
-  color: var(--color-muted);
   letter-spacing: 0.05em;
+  color: #9B8573;
 }
 
-/* ----- 主体 ----- */
-.world-main {
-  padding-top: 0;
+.nav-contact {
+  font-size: 0.9rem;
+  color: #B5A48C;
+  transition: color 0.3s ease;
 }
 
-/* ----- 第一屏引言 ----- */
-.section-intro {
+.nav-contact:hover {
+  color: #9B8573;
+}
+
+/* ========== module: one screen per section ========== */
+.module {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  padding: 4rem 2rem 3rem;
-}
-
-.section-intro .section-inner {
-  text-align: center;
-  max-width: 560px;
-}
-
-.section-quote {
-  font-size: 1.15rem;
-  line-height: 2.4;
-  color: var(--color-text);
-}
-.quote-last {
-  display: inline-block;
-  margin-top: 0.3rem;
-}
-
-.section-sign {
-  font-size: 0.9rem;
-  color: var(--color-muted);
-  margin-top: 2rem;
-  letter-spacing: 0.1em;
-}
-
-/* ----- 分隔线 ----- */
-.divider {
-  display: flex;
-  justify-content: center;
-  padding: 0.5rem 0;
-}
-.divider span {
-  display: block;
-  width: 40px;
-  height: 1px;
-  background: var(--color-line);
-}
-
-/* ----- 内容区块 ----- */
-.section {
-  padding: 5rem 2rem;
-}
-.section:last-child {
-  padding-bottom: 6rem;
+  padding: 6rem 1rem 4rem;
+  box-sizing: border-box;
+  scroll-snap-align: start;
 }
 
 .section-inner {
-  max-width: 620px;
+  max-width: 800px;
   margin: 0 auto;
-  animation: fadeIn 0.8s ease-out;
+  width: 100%;
 }
 
-@keyframes fadeIn {
-  from { opacity 0; transform: translateY(20px); }
-  to   { opacity 1; transform: translateY(0); }
-}
-
+/* ========== title ========== */
 .section-title {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 400;
-  color: var(--color-text);
-  letter-spacing: 0.15em;
+  color: #9B8573;
   margin-bottom: 2rem;
-  position: relative;
-  padding-bottom: 1rem;
-}
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 30px;
-  height: 1.5px;
-  background: var(--color-accent);
+  letter-spacing: 0.08em;
 }
 
+/* ========== body text ========== */
 .section-content {
-  font-size: 1rem;
-  line-height: 2.2;
-  color: var(--color-text);
+  font-size: 1.05rem;
 }
+
 .section-content p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .sub-title {
-  font-size: 1rem;
-  color: var(--color-highlight);
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
   font-weight: 400;
+  color: #7A6B5D;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
 }
 
 .highlight-line {
-  color: var(--color-highlight);
-  margin-top: 1.2rem;
+  color: #9B8573;
+  font-weight: 400;
 }
 
-/* ----- "关于我们俩" 区块 ----- */
-.two-of-us {
-  margin-top: 2rem;
-  padding: 1.5rem 1.8rem;
-  background: rgba(212, 197, 176, 0.12);
-  border-radius: 8px;
-  border-left: 2px solid var(--color-accent2);
+/* ========== divider ========== */
+.divider {
+  height: 1px;
+  background: #e8ddd0;
+  margin: 0;
 }
 
-/* ----- 联系我们 ----- */
-.contact-content {
-  text-align: center;
-}
-.contact-email {
-  display: inline-block;
-  margin-top: 1.5rem;
-  font-size: 1.2rem;
-  color: var(--color-highlight);
-  letter-spacing: 0.05em;
-  padding: 0.6rem 1.5rem;
-  border: 1px solid var(--color-accent2);
-  border-radius: 100px;
-  transition: all var(--transition);
-}
-.contact-email:hover {
-  background: var(--color-accent2);
-  opacity: 1;
+.divider span {
+  display: none;
 }
 
-/* ----- 底部 ----- */
-.footer {
-  text-align: center;
-  padding: 3rem 2rem;
-  color: var(--color-muted);
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  border-top: 1px solid var(--color-line);
-}
-.footer-sub {
-  font-size: 0.8rem;
-  margin-top: 0.3rem;
-  color: var(--color-line);
-}
-
-/* ============================================
-   右侧进度指示点
-   ============================================ */
-.progress-dots {
-  position: fixed;
-  right: 1.2rem;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 90;
-}
-
-.dot {
-  display: block;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--color-dot);
-  transition: all var(--transition);
-  cursor: pointer;
-}
-.dot.active {
-  background: var(--color-dot-active);
-  transform: scale(1.4);
-}
-
-/* ============================================
-   响应式
-   ============================================ */
-@media (max-width: 640px) {
-  .home-title { font-size: 2.2rem; }
-  .home-quote, .section-quote { font-size: 1rem; line-height: 2; }
-  .section { padding: 3.5rem 1.5rem; }
-  .section-title { font-size: 1.2rem; }
-  .progress-dots { right: 0.6rem; gap: 8px; }
-  .dot { width: 5px; height: 5px; }
-  .top-nav { padding: 1rem 1.2rem; }
-  .contact-email { font-size: 1rem; }
-}
-
-/* ----- 滚动条美化 ----- */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb {
-  background: var(--color-line);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover { background: var(--color-accent2); }
+/* ========== read more ========== */
 .read-more {
   margin-top: 1.5rem;
   padding-left: 1rem;
@@ -385,4 +148,94 @@ a:hover { opacity: 0.7; }
 
 .read-more a:hover {
   border-bottom-color: #8a7d6d;
+}
+
+/* ========== contact ========== */
+.contact-content {
+  text-align: center;
+}
+
+.contact-email {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #9B8573;
+  font-weight: 400;
+  border-bottom: 1px solid #d4c5b0;
+  padding-bottom: 2px;
+  transition: border-color 0.3s ease;
+}
+
+.contact-email:hover {
+  border-bottom-color: #9B8573;
+}
+
+/* ========== footer ========== */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #B5A48C;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.footer-sub {
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  color: #d4c5b0;
+}
+
+/* ========== progress dots ========== */
+.progress-dots {
+  position: fixed;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  z-index: 100;
+}
+
+.progress-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d4c5b0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.progress-dots .dot.active {
+  background: #9B8573;
+  transform: scale(1.3);
+}
+
+/* ========== mobile ========== */
+@media (max-width: 768px) {
+  .module {
+    padding: 5rem 1rem 3rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .section-content {
+    font-size: 0.95rem;
+  }
+
+  .top-nav {
+    padding: 0.8rem 1rem;
+  }
+
+  .progress-dots {
+    right: 0.8rem;
+    gap: 0.6rem;
+  }
+
+  .progress-dots .dot {
+    width: 8px;
+    height: 8px;
+  }
 }
