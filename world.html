@@ -18,7 +18,7 @@
   <main class="world-main">
 
     <!-- 我们关注的是 -->
-    <section class="section module" id="care" data-module="1">
+    <section class="section" id="care">
       <div class="section-inner">
         <h2 class="section-title">我们关注的是</h2>
         <div class="section-content">
@@ -35,7 +35,7 @@
     <div class="divider"><span></span></div>
 
     <!-- 团体风格 -->
-    <section class="section module" id="style" data-module="2">
+    <section class="section" id="style">
       <div class="section-inner">
         <h2 class="section-title">团体风格</h2>
         <div class="section-content">
@@ -52,7 +52,7 @@
     <div class="divider"><span></span></div>
 
     <!-- 不同的我们 -->
-    <section class="section module" id="different" data-module="3">
+    <section class="section" id="different">
       <div class="section-inner">
         <h2 class="section-title">不同的我们</h2>
         <div class="section-content">
@@ -68,7 +68,7 @@
           <p class="sub-title">在哀伤里，我们…</p>
           <p>不去劝慰，也不急着帮你"走出来"。我们允许哀伤存在，也允许它反复。我们看重你对失去之物的依恋，胜过看重"放下"。在这里，你的丧失是被允许的，你的停顿是被尊重的。</p>
 
-          <!-- 延伸阅读 -->
+          <!-- ✅ 新增：延伸阅读 -->
           <div class="read-more">
             <p>▸ 延伸阅读</p>
             <ul>
@@ -83,7 +83,7 @@
     <div class="divider"><span></span></div>
 
     <!-- 个体咨询 -->
-    <section class="section module" id="individual" data-module="4">
+    <section class="section" id="individual">
       <div class="section-inner">
         <h2 class="section-title">个体咨询</h2>
         <div class="section-content">
@@ -97,7 +97,7 @@
     <div class="divider"><span></span></div>
 
     <!-- 关于「做一个人」 -->
-    <section class="section module" id="about" data-module="5">
+    <section class="section" id="about">
       <div class="section-inner">
         <h2 class="section-title">关于「做一个人」</h2>
         <div class="section-content">
@@ -113,7 +113,7 @@
     <div class="divider"><span></span></div>
 
     <!-- 联系我们 -->
-    <section class="section module section-contact" id="contact" data-module="6">
+    <section class="section section-contact" id="contact">
       <div class="section-inner">
         <h2 class="section-title">联系我们</h2>
         <div class="section-content contact-content">
@@ -136,18 +136,17 @@
 
   <!-- 右侧进度指示器 -->
   <div class="progress-dots">
-    <a href="#care" class="dot active" data-module="1" data-index="0"></a>
-    <a href="#style" class="dot" data-module="2" data-index="1"></a>
-    <a href="#different" class="dot" data-module="3" data-index="2"></a>
-    <a href="#individual" class="dot" data-module="4" data-index="3"></a>
-    <a href="#about" class="dot" data-module="5" data-index="4"></a>
-    <a href="#contact" class="dot" data-module="6" data-index="5"></a>
+    <a href="#care" class="dot active" data-index="0"></a>
+    <a href="#style" class="dot" data-index="1"></a>
+    <a href="#different" class="dot" data-index="2"></a>
+    <a href="#individual" class="dot" data-index="3"></a>
+    <a href="#about" class="dot" data-index="4"></a>
+    <a href="#contact" class="dot" data-index="5"></a>
   </div>
 
   <script>
-    // 滚动时高亮当前 dot
     const dots = document.querySelectorAll('.dot');
-    const sections = document.querySelectorAll('.module');
+    const sections = document.querySelectorAll('.section');
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
