@@ -1,4 +1,4 @@
-/* ========== global ========== */
+/* ========== 全局 ========== */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,6 @@
 }
 
 html {
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
@@ -24,68 +23,50 @@ a {
   text-decoration: none;
 }
 
-/* ========== top nav ========== */
+/* ========== 顶部导航 ========== */
 .top-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
   background: rgba(250, 248, 245, 0.85);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  z-index: 100;
 }
 
 .nav-brand {
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.05em;
-  color: #9B8573;
 }
 
 .nav-contact {
   font-size: 0.9rem;
-  color: #B5A48C;
-  transition: color 0.3s ease;
+  opacity: 0.7;
 }
 
-.nav-contact:hover {
-  color: #9B8573;
+/* ========== 主内容 ========== */
+.world-main {
+  padding-top: 80px;
 }
 
-/* ========== module: one screen per section ========== */
-.module {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 6rem 1rem 4rem;
-  box-sizing: border-box;
-  scroll-snap-align: start;
+.section {
+  padding: 5rem 1.5rem;
 }
 
 .section-inner {
-  max-width: 800px;
+  max-width: 720px;
   margin: 0 auto;
-  width: 100%;
 }
 
-/* ========== title ========== */
 .section-title {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #9B8573;
+  font-size: 1.4rem;
+  font-weight: 600;
   margin-bottom: 2rem;
-  letter-spacing: 0.08em;
-}
-
-/* ========== body text ========== */
-.section-content {
-  font-size: 1.05rem;
+  letter-spacing: 0.05em;
 }
 
 .section-content p {
@@ -93,32 +74,20 @@ a {
 }
 
 .sub-title {
-  font-weight: 400;
-  color: #7A6B5D;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.05rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: #5c5245;
 }
 
 .highlight-line {
+  font-weight: 500;
   color: #9B8573;
-  font-weight: 400;
 }
 
-/* ========== divider ========== */
-.divider {
-  height: 1px;
-  background: #e8ddd0;
-  margin: 0;
-}
-
-.divider span {
-  display: none;
-}
-
-/* ========== read more ========== */
+/* ========== 延伸阅读 ========== */
 .read-more {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   padding-left: 1rem;
   border-left: 2px solid #e8ddd0;
   font-size: 0.9rem;
@@ -141,7 +110,6 @@ a {
 
 .read-more a {
   color: #8a7d6d;
-  text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s ease;
 }
@@ -150,7 +118,7 @@ a {
   border-bottom-color: #8a7d6d;
 }
 
-/* ========== contact ========== */
+/* ========== 联系我们 ========== */
 .contact-content {
   text-align: center;
 }
@@ -159,33 +127,27 @@ a {
   display: inline-block;
   margin-top: 1.5rem;
   font-size: 1.1rem;
+  font-weight: 500;
   color: #9B8573;
-  font-weight: 400;
-  border-bottom: 1px solid #d4c5b0;
-  padding-bottom: 2px;
-  transition: border-color 0.3s ease;
+  border-bottom: 1px solid #9B8573;
+  padding-bottom: 0.2rem;
 }
 
-.contact-email:hover {
-  border-bottom-color: #9B8573;
-}
-
-/* ========== footer ========== */
+/* ========== 底部 ========== */
 .footer {
   text-align: center;
-  padding: 2rem 1rem;
-  color: #B5A48C;
+  padding: 3rem 1rem;
   font-size: 0.9rem;
-  letter-spacing: 0.05em;
+  color: #8a7d6d;
 }
 
 .footer-sub {
-  font-size: 0.8rem;
   margin-top: 0.3rem;
-  color: #d4c5b0;
+  font-size: 0.85rem;
+  opacity: 0.7;
 }
 
-/* ========== progress dots ========== */
+/* ========== 右侧进度点 ========== */
 .progress-dots {
   position: fixed;
   right: 1.5rem;
@@ -194,7 +156,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  z-index: 100;
+  z-index: 101;
 }
 
 .progress-dots .dot {
@@ -203,7 +165,6 @@ a {
   border-radius: 50%;
   background: #d4c5b0;
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
 .progress-dots .dot.active {
@@ -211,40 +172,21 @@ a {
   transform: scale(1.3);
 }
 
-/* ========== mobile ========== */
+/* ========== 移动端 ========== */
 @media (max-width: 768px) {
-  .module {
-    padding: 5rem 1rem 3rem;
-  }
-
-  .section-title {
-    font-size: 1.4rem;
-  }
-
-  .section-content {
-    font-size: 0.95rem;
-  }
-
   .top-nav {
     padding: 0.8rem 1rem;
   }
 
+  .section {
+    padding: 4rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
   .progress-dots {
     right: 0.8rem;
-    gap: 0.6rem;
   }
-
-  .progress-dots .dot {
-    width: 8px;
-    height: 8px;
-  }
-}
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
-.section {
-  min-height: 100vh;
-  scroll-snap-align: start;
 }
